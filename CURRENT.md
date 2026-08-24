@@ -4,19 +4,19 @@ Last updated: 2026-08-24
 
 ## Active objective
 
-Bootstrap a reproducible, agent-operable foundation for the ML/AI Platform.
+Promote the completed repository bootstrap to `main`, then begin the core contract/local-registry implementation.
 
 ## Active issue
 
-#1 — `[IN PROGRESS][P0] Bootstrap ML/AI platform foundation`
+#1 — `[REVIEW][P0] Bootstrap ML/AI platform foundation`
 
 ## Active branch
 
-`agent/issue-1-bootstrap-platform`
+`develop`
 
 ## Active pull request
 
-#9 — `Issue #1: bootstrap ML/AI platform foundation` (draft, targets `develop`)
+Bootstrap implementation PR #9 merged to `develop` at `61685bb24aa98ad2489a8412b61043f956108df9`.
 
 ## Current status
 
@@ -27,15 +27,16 @@ Bootstrap a reproducible, agent-operable foundation for the ML/AI Platform.
 - architecture decision 0001 defines dataset, candidate, evaluation, findings, registry/promotion, and connector boundaries
 - Python 3.12 package, mise/uv tasks, smoke test, and GitHub Actions check workflow added
 - dependency-ordered implementation backlog created as issues #2–#8
-- bootstrap draft PR #9 opened to `develop`
+- bootstrap PR #9 passed CI and merged to `develop`
+- Issue #2 is READY for core contracts/local registry work
 
 ## Next action
 
-Inspect PR #9 CI. Repair any deterministic failures. When green, verify Issue #1 acceptance criteria, update issue state, and merge to `develop` if no human gate or requested change applies. Then promote Issue #2 to READY.
+Prepare `develop` → `main` bootstrap promotion for explicit human approval. Independent implementation work may continue from `develop`; when starting the next ordinary task, move Issue #2 to IN PROGRESS and branch from current `develop`.
 
 ## Human decisions required
 
-None for the current bootstrap PR into `develop` unless review identifies a policy/architecture concern. Promotion from `develop` to `main` remains human-gated.
+Explicit approval is required before merging the bootstrap promotion from `develop` to `main`.
 
 ## Do not begin
 
