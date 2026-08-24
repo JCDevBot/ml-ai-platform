@@ -4,15 +4,15 @@ Last updated: 2026-08-24
 
 ## Active objective
 
-Complete the first external-consumer proof using leakage-safe historical Fantasy Premier League forecasting data without adding FPL behavior to the core package.
+Complete provider-neutral LLM, RAG, and agent evaluation while keeping deterministic evidence distinct from optional judge-model evidence.
 
 ## Active issue
 
-#6 — `[IN PROGRESS][P1] Integrate FPL forecasting as the first external consumer`
+#8 — `[IN PROGRESS][P2] Add LLM, RAG, and agent evaluation adapters`
 
 ## Active branch
 
-`agent/issue-6-fpl-consumer`
+`agent/issue-8-generative-evaluation`
 
 ## Active pull request
 
@@ -20,30 +20,29 @@ Not opened yet.
 
 ## Current status
 
-- Issues #4 and #5 are complete and merged to `develop` through PRs #15 and #16; both repository checks passed
-- focused FPL consumer lives under `examples/fpl_consumer/`, outside `src/ml_ai_platform`
-- historical fixture pins exact 2025-26 GW36/GW37/GW38 source paths and Git blob SHAs from `vaastav/Fantasy-Premier-League`
-- separate training-cutoff and resolved-evaluation dataset records preserve temporal lineage
-- baseline candidate uses last-gameweek points; learned candidate is a consumer-side ridge model trained GW36 -> GW37 and applied to GW37 to predict GW38
-- GW38 labels are used only for evaluation after the prediction cutoff
-- reusable platform regression, position-slice, probability/calibration, comparison finding, registry, and champion/challenger lifecycle components are used unchanged
-- on the pinned sample, the baseline MAE is 2/13 (~0.154) and the ridge MAE is ~0.424; the deterministic no-regression policy rejects the learned challenger and retains the baseline champion
-- tests assert temporal boundaries, exact source SHAs, two candidate adapter types, regression/probability metrics, reusable findings/promotion decisions, and absence of FPL logic in the core package
-- integration assessment documents that no core contract change was required
+- Issues #4, #5, and #6 are complete and merged to `develop` through PRs #15, #16, and #17; all repository checks passed
+- FPL consumer proof uses pinned historical data and required no core contract changes
+- Issue #7 connector/data-movement work remains blocked by explicit repository human gates around authentication trust boundaries, privacy, and sensitive-data handling
+- provider-neutral `GenerativeCase`, `GenerativeOutput`, and `GenerativeCandidate` adapter protocol added without provider SDK dependencies
+- deterministic generative metrics include task accuracy, structured-output validity, tool-selection accuracy, retrieval precision/recall, unsupported-claim rate, latency, and cost
+- optional `JudgeResult` aggregation requires judge identity/config/scale provenance and emits `evidence_type=judge_model` plus `authoritative_ground_truth=false`
+- provider-free fake candidate tests cover deterministic metrics, judge provenance, judge-mixing rejection, and case/output alignment
+- incident-triage fixture compares an LLM-prompt baseline with a tool-agent challenger using reusable registry, findings, and champion/challenger lifecycle components
+- incident challenger improves deterministic accuracy/structure/tool/claim metrics, exposes a separate cost regression finding, and is promoted under deterministic gates that do not rely on judge score
 
 ## Next action
 
-Open the Issue #6 PR to `develop`, run repository `Check`, repair any deterministic failures, and merge autonomously only if all acceptance criteria pass and no human gate emerges. If merged, close #6 and determine the next dependency-eligible issue without crossing connector/privacy or cross-repository gates.
+Open the Issue #8 PR to `develop`, run repository `Check`, repair any failures, and merge autonomously only if all acceptance criteria pass and no human gate emerges. If merged, close #8 and leave Issue #7 blocked with the exact human trust-boundary decision required.
 
 ## Human decisions required
 
-None for this focused in-repository consumer proof. A future change to the separate FPL application remains a separate cross-repository decision if its blast radius cannot be bounded locally.
+Issue #7 requires explicit approval before designing or implementing connector authentication trust boundaries and sensitive-data movement policy. Smallest resolving action: approve proceeding with a local-only connector trust/data-movement design under the stated metadata-only/upload/local-execution principles, without production credentials or deployment.
 
 ## Do not begin
 
 - production deployment or hosted billing
 - credentials or secrets
-- paid model-provider integration
-- broad filesystem connector ingestion
+- provider-backed paid model calls in tests
+- connector authentication/data-movement implementation without the Issue #7 human gate
 - FPL-specific implementation inside core modules
 - `develop` to `main` promotion without explicit human approval
