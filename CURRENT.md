@@ -4,15 +4,15 @@ Last updated: 2026-08-24
 
 ## Active objective
 
-Complete the local CLI and CI-friendly developer workflow on top of the core registry and evaluation engine.
+Complete the evidence-driven champion/challenger lifecycle on top of the immutable registry and deterministic evaluation gates.
 
 ## Active issue
 
-#4 — `[IN PROGRESS][P1] Add local CLI and CI-friendly evaluation workflow`
+#5 — `[IN PROGRESS][P1] Implement champion/challenger registry and promotion policy`
 
 ## Active branch
 
-`agent/issue-4-local-cli`
+`agent/issue-5-champion-lifecycle`
 
 ## Active pull request
 
@@ -20,22 +20,24 @@ Not opened yet.
 
 ## Current status
 
-- repository bootstrap is on `main`; ordinary implementation continues through `develop`
-- Issues #2 and #3 are complete on `develop`
-- local CLI command surface added for dataset/candidate registration, evaluation, comparison, and reports
-- YAML/JSON local documents feed the existing contracts and evaluation engine; the CLI does not execute model artifacts
-- JSON output uses versioned envelope `mlai.cli.v1`
-- deterministic policy rejection has a dedicated non-zero exit code for CI
-- end-to-end tests cover registration, evaluation, protected-slice rejection, reporting, invalid input, and idempotent registration
-- CLI documentation and README entry point added
+- Issue #4 local CLI is complete and merged to `develop` through PR #15; repository `Check` passed
+- `mlai` now provides network-free registration, evaluation, comparison, report, versioned JSON output, and CI policy exit codes
+- Issue #5 lifecycle core added on the active branch
+- versioned immutable promotion policies compose existing deterministic `MetricGate` rules
+- immutable `PromotionDecision` records remain the authoritative lifecycle history
+- replaceable champion aliases reference the exact accepted decision and evaluation run
+- missing incumbent evidence produces `REVIEW`, not promotion
+- rejected/reviewed challengers do not move the champion alias
+- rollback requires a previously accepted target and appends a new accepted decision rather than rewriting history
+- tests cover accept, protected-slice reject, human review, missing evidence, rollback, immutable policies, and candidate/evaluation mismatch
 
 ## Next action
 
-Open the Issue #4 PR to `develop`, inspect repository `Check`, repair any deterministic failure, and merge autonomously only if all acceptance criteria pass and no human gate emerges. Then advance Issue #5 to READY.
+Open the Issue #5 PR to `develop`, run repository `Check`, repair any failures, and merge autonomously only if all acceptance criteria pass and no human gate emerges. If merged, close #5 and advance the next dependency-eligible issue.
 
 ## Human decisions required
 
-None for the current ordinary implementation route unless CI/review reveals a backward-incompatible contract concern or another explicit human gate.
+None for the current local lifecycle implementation unless review reveals a backward-incompatible consumer impact or another explicit human gate.
 
 ## Do not begin
 
