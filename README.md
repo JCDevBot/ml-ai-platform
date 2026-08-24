@@ -61,7 +61,7 @@ Initial toolchain:
 
 - Python 3.12
 - `mise` for tool/task entry points
-- `uv` for dependency/environment management
+- `uv` for Python dependency and environment management
 - `pytest` for deterministic tests
 
 Setup:
@@ -82,6 +82,20 @@ Individual tests:
 ```bash
 mise run test
 ```
+
+## Local CLI
+
+After setup, the `mlai` command provides a network-free developer workflow backed by the same contracts, filesystem registry, and evaluation engine as the Python API:
+
+```bash
+mlai dataset register dataset.yaml
+mlai candidate register candidate.yaml
+mlai evaluate experiment.yaml
+mlai compare baseline-run challenger-run --gates gates.yaml
+mlai report challenger-run
+```
+
+JSON is the default output format and uses the versioned envelope `mlai.cli.v1`; deterministic policy rejection returns a distinct non-zero exit code for CI. See [`docs/cli.md`](docs/cli.md) for input shapes, exit codes, and examples.
 
 ## Architecture
 
