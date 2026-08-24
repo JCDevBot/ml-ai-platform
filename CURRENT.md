@@ -4,41 +4,36 @@ Last updated: 2026-08-24
 
 ## Active objective
 
-Build the deterministic evaluation engine and evidence-based findings layer.
+Begin the local CLI and CI-friendly developer workflow on top of the completed core registry and evaluation engine.
 
 ## Active issue
 
-#3 — `[IN PROGRESS][P1] Build evaluation engine and deterministic findings`
+#4 — `[READY][P1] Add local CLI and CI-friendly evaluation workflow`
 
 ## Active branch
 
-`agent/issue-3-evaluation-engine`
+`develop`
 
 ## Active pull request
 
-Not opened yet.
+None.
 
 ## Current status
 
 - repository bootstrap is on `main`; ordinary implementation continues through `develop`
 - Issue #2 core contracts/local registry is complete and merged to `develop`
-- Issue #3 activated and assigned
-- deterministic regression metrics implemented: MAE and RMSE
-- deterministic binary classification metrics implemented: precision, recall, F1, and confusion-matrix cells
-- probability metrics implemented: Brier score, log loss, and calibration error with bin summary
-- reusable slice evaluation implemented
-- baseline/challenger comparison findings implemented
-- deterministic threshold, calibration, and protected-slice regression gates implemented
-- synthetic test demonstrates overall challenger improvement rejected by protected-slice regression
-- known-answer and invalid-input tests added
+- Issue #3 evaluation engine/deterministic findings is complete and merged to `develop` through PR #13
+- regression, binary classification, probability/calibration, slice evaluation, baseline/challenger findings, and deterministic gating are available in the core
+- repository `Check` passed for PR #13
+- Issue #4 is unblocked and READY
 
 ## Next action
 
-Open the Issue #3 PR to `develop`, inspect repository CI, repair any failures, then verify all acceptance criteria before autonomous merge if policy permits.
+Activate Issue #4, branch `agent/issue-4-local-cli` from current `develop`, and implement the smallest complete local CLI workflow using the existing contracts, registry, and evaluation engine. Preserve stable machine-readable output for CI and keep the default workflow network-free.
 
 ## Human decisions required
 
-None for this ordinary implementation route unless a backward-incompatible public-contract change or another explicit human gate emerges.
+None for the next ordinary implementation route unless a backward-incompatible public-contract change or another explicit human gate emerges.
 
 ## Do not begin
 
