@@ -4,39 +4,37 @@ Last updated: 2026-08-24
 
 ## Active objective
 
-Promote the completed repository bootstrap to `main`, then begin the core contract/local-registry implementation.
+Implement the first domain-neutral ML/AI lifecycle contracts and immutable local registry.
 
 ## Active issue
 
-#1 — `[REVIEW][P0] Bootstrap ML/AI platform foundation`
+#2 — `[IN PROGRESS][P1] Implement core ML/AI contracts and local registry`
 
 ## Active branch
 
-`develop`
+`agent/issue-2-core-contracts-registry`
 
 ## Active pull request
 
-Bootstrap implementation PR #9 merged to `develop` at `61685bb24aa98ad2489a8412b61043f956108df9`.
+Not opened yet.
 
 ## Current status
 
-- repository initialized with `main` and `develop`
-- published Engineering Platform `v0.1.0` pinned in `engineering-platform.yaml`
-- repository-local agent steering defines autonomous reversible/testable work and explicit human gates
-- initial roadmap defines local-first ML/AI lifecycle phases
-- architecture decision 0001 defines dataset, candidate, evaluation, findings, registry/promotion, and connector boundaries
-- Python 3.12 package, mise/uv tasks, smoke test, and GitHub Actions check workflow added
-- dependency-ordered implementation backlog created as issues #2–#8
-- bootstrap PR #9 passed CI and merged to `develop`
-- Issue #2 is READY for core contracts/local registry work
+- bootstrap foundation promoted to `main` through PR #11 with explicit human approval
+- Issue #1 closed as complete
+- Issue #2 activated and assigned
+- domain-neutral contract layer added for datasets, candidates, experiments, metrics, findings, evaluation runs, and promotion decisions
+- deterministic canonical JSON and content identity helpers added
+- filesystem-backed immutable registry added with exclusive-create semantics and path-safety validation
+- initial contract and registry tests added
 
 ## Next action
 
-Prepare `develop` → `main` bootstrap promotion for explicit human approval. Independent implementation work may continue from `develop`; when starting the next ordinary task, move Issue #2 to IN PROGRESS and branch from current `develop`.
+Open the Issue #2 pull request to `develop`, inspect CI, repair any deterministic failures, then continue against the issue acceptance criteria.
 
 ## Human decisions required
 
-Explicit approval is required before merging the bootstrap promotion from `develop` to `main`.
+None for the current ordinary implementation route into `develop` unless a backward-incompatible public-contract decision or another explicit human gate emerges.
 
 ## Do not begin
 
