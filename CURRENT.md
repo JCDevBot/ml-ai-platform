@@ -16,7 +16,7 @@ Bootstrap a reproducible, agent-operable foundation for the ML/AI Platform.
 
 ## Active pull request
 
-Not opened yet.
+#9 — `Issue #1: bootstrap ML/AI platform foundation` (draft, targets `develop`)
 
 ## Current status
 
@@ -25,15 +25,17 @@ Not opened yet.
 - repository-local agent steering defines autonomous reversible/testable work and explicit human gates
 - initial roadmap defines local-first ML/AI lifecycle phases
 - architecture decision 0001 defines dataset, candidate, evaluation, findings, registry/promotion, and connector boundaries
-- Python tooling and CI bootstrap are the next implementation step
+- Python 3.12 package, mise/uv tasks, smoke test, and GitHub Actions check workflow added
+- dependency-ordered implementation backlog created as issues #2–#8
+- bootstrap draft PR #9 opened to `develop`
 
 ## Next action
 
-Complete Python/mise/uv tooling, deterministic CI, and initial smoke tests; then create the first implementation backlog and open a draft PR to `develop`.
+Inspect PR #9 CI. Repair any deterministic failures. When green, verify Issue #1 acceptance criteria, update issue state, and merge to `develop` if no human gate or requested change applies. Then promote Issue #2 to READY.
 
 ## Human decisions required
 
-None for the current bootstrap increment.
+None for the current bootstrap PR into `develop` unless review identifies a policy/architecture concern. Promotion from `develop` to `main` remains human-gated.
 
 ## Do not begin
 
