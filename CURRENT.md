@@ -4,36 +4,38 @@ Last updated: 2026-08-24
 
 ## Active objective
 
-Begin the local CLI and CI-friendly developer workflow on top of the completed core registry and evaluation engine.
+Complete the local CLI and CI-friendly developer workflow on top of the core registry and evaluation engine.
 
 ## Active issue
 
-#4 — `[READY][P1] Add local CLI and CI-friendly evaluation workflow`
+#4 — `[IN PROGRESS][P1] Add local CLI and CI-friendly evaluation workflow`
 
 ## Active branch
 
-`develop`
+`agent/issue-4-local-cli`
 
 ## Active pull request
 
-None.
+Not opened yet.
 
 ## Current status
 
 - repository bootstrap is on `main`; ordinary implementation continues through `develop`
-- Issue #2 core contracts/local registry is complete and merged to `develop`
-- Issue #3 evaluation engine/deterministic findings is complete and merged to `develop` through PR #13
-- regression, binary classification, probability/calibration, slice evaluation, baseline/challenger findings, and deterministic gating are available in the core
-- repository `Check` passed for PR #13
-- Issue #4 is unblocked and READY
+- Issues #2 and #3 are complete on `develop`
+- local CLI command surface added for dataset/candidate registration, evaluation, comparison, and reports
+- YAML/JSON local documents feed the existing contracts and evaluation engine; the CLI does not execute model artifacts
+- JSON output uses versioned envelope `mlai.cli.v1`
+- deterministic policy rejection has a dedicated non-zero exit code for CI
+- end-to-end tests cover registration, evaluation, protected-slice rejection, reporting, invalid input, and idempotent registration
+- CLI documentation and README entry point added
 
 ## Next action
 
-Activate Issue #4, branch `agent/issue-4-local-cli` from current `develop`, and implement the smallest complete local CLI workflow using the existing contracts, registry, and evaluation engine. Preserve stable machine-readable output for CI and keep the default workflow network-free.
+Open the Issue #4 PR to `develop`, inspect repository `Check`, repair any deterministic failure, and merge autonomously only if all acceptance criteria pass and no human gate emerges. Then advance Issue #5 to READY.
 
 ## Human decisions required
 
-None for the next ordinary implementation route unless a backward-incompatible public-contract change or another explicit human gate emerges.
+None for the current ordinary implementation route unless CI/review reveals a backward-incompatible contract concern or another explicit human gate.
 
 ## Do not begin
 
