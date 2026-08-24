@@ -1,0 +1,33 @@
+name: Check
+
+on:
+  pull_request:
+    branches: [develop, main]
+  push:
+    branches: [develop, main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ml-ai-platform-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install mise tools
+        uses: jdx/mise-action@v3
+        with:
+          cache: true
+
+      - name: Install dependencies
+        run: mise run setup
+
+      - name: Run standard checks
+        run: mise run check
