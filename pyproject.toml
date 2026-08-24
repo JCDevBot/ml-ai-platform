@@ -4,7 +4,12 @@ version = "0.1.0"
 description = "Domain-agnostic ML/AI evaluation and lifecycle platform"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+  "pyyaml>=6.0,<7",
+]
+
+[project.scripts]
+mlai = "ml_ai_platform.cli:main"
 
 [dependency-groups]
 dev = [
