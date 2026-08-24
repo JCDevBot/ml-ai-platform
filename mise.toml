@@ -1,0 +1,18 @@
+[tools]
+python = "3.12"
+uv = "latest"
+
+[tasks.setup]
+description = "Install project and development dependencies"
+run = "uv sync --group dev"
+
+[tasks.test]
+description = "Run deterministic unit tests"
+run = "uv run pytest"
+
+[tasks.check]
+description = "Run the standard local validation suite"
+run = [
+  "uv run python -m compileall -q src tests",
+  "uv run pytest",
+]
