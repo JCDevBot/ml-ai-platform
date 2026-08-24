@@ -1,0 +1,21 @@
+{
+  "cases": [
+    {"case_id":"db-deploy","prompt":"Database connections fail immediately after a deploy.","expected_label":"sev1","expected_tool":"rollback","relevant_retrieval_ids":["runbook-db"],"supported_claims":["deploy-correlated","db-unreachable"]},
+    {"case_id":"cache-slow","prompt":"Cache latency is high but requests still succeed.","expected_label":"sev3","expected_tool":"inspect-cache","relevant_retrieval_ids":["runbook-cache","dashboard-cache"],"supported_claims":["cache-latency"]},
+    {"case_id":"auth-spike","prompt":"Authentication failures spike across all regions.","expected_label":"sev1","expected_tool":"page-identity","relevant_retrieval_ids":["runbook-auth"],"supported_claims":["multi-region-auth-failure"]},
+    {"case_id":"single-host","prompt":"One worker reports disk pressure; service is healthy.","expected_label":"sev4","expected_tool":"inspect-host","relevant_retrieval_ids":["runbook-host"],"supported_claims":["single-host-disk-pressure"]}
+  ],
+  "baseline_outputs": [
+    {"case_id":"db-deploy","label":"sev1","structured_valid":true,"selected_tool":"rollback","retrieved_ids":["runbook-db"],"claims":["deploy-correlated","db-unreachable"],"latency_ms":180,"cost_units":2.2},
+    {"case_id":"cache-slow","label":"sev2","structured_valid":true,"selected_tool":"inspect-cache","retrieved_ids":["runbook-cache"],"claims":["cache-latency"],"latency_ms":160,"cost_units":2.0},
+    {"case_id":"auth-spike","label":"sev2","structured_valid":false,"selected_tool":"inspect-auth","retrieved_ids":["runbook-auth"],"claims":["multi-region-auth-failure","database-down"],"latency_ms":210,"cost_units":2.4},
+    {"case_id":"single-host","label":"sev4","structured_valid":true,"selected_tool":"inspect-host","retrieved_ids":["runbook-host"],"claims":["single-host-disk-pressure"],"latency_ms":150,"cost_units":1.8}
+  ],
+  "challenger_outputs": [
+    {"case_id":"db-deploy","label":"sev1","structured_valid":true,"selected_tool":"rollback","retrieved_ids":["runbook-db"],"claims":["deploy-correlated","db-unreachable"],"latency_ms":170,"cost_units":2.5},
+    {"case_id":"cache-slow","label":"sev3","structured_valid":true,"selected_tool":"inspect-cache","retrieved_ids":["runbook-cache","dashboard-cache"],"claims":["cache-latency"],"latency_ms":175,"cost_units":2.3},
+    {"case_id":"auth-spike","label":"sev1","structured_valid":true,"selected_tool":"page-identity","retrieved_ids":["runbook-auth"],"claims":["multi-region-auth-failure"],"latency_ms":190,"cost_units":2.6},
+    {"case_id":"single-host","label":"sev4","structured_valid":true,"selected_tool":"inspect-host","retrieved_ids":["runbook-host"],"claims":["single-host-disk-pressure"],"latency_ms":155,"cost_units":2.0}
+  ],
+  "judge": {"judge_id":"fixture-judge-v1","config_hash":"judge-config-001","scale_min":1,"scale_max":5,"baseline_scores":[4,3,2,4],"challenger_scores":[4,5,5,4]}
+}
