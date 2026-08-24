@@ -1,0 +1,26 @@
+{
+  "source": {
+    "repository": "vaastav/Fantasy-Premier-League",
+    "season": "2025-26",
+    "files": {
+      "gw36": {"path": "data/2025-26/gws/gw36.csv", "sha": "d4aca0065019a72e91e56c72159ee98b17197e7a"},
+      "gw37": {"path": "data/2025-26/gws/gw37.csv", "sha": "c39dfc812fedb85f9d4ce6fe48111ee65472c66a"},
+      "gw38": {"path": "data/2025-26/gws/gw38.csv", "sha": "50af1ac211090656083104f521170dcec0a8a285"}
+    }
+  },
+  "players": [
+    {"name":"Reinildo Mandava","position":"DEF","element":541,"gw36":{"points":8,"ict":2.4,"minutes":90},"gw37":{"points":2,"ict":1.6,"minutes":90},"gw38":{"points":2}},
+    {"name":"Lorenzo Lucca","position":"FWD","element":805,"gw36":{"points":1,"ict":0.6,"minutes":7},"gw37":{"points":0,"ict":0.0,"minutes":0},"gw38":{"points":0}},
+    {"name":"Lewis Dobbin","position":"MID","element":57,"gw36":{"points":0,"ict":0.0,"minutes":0},"gw37":{"points":0,"ict":0.0,"minutes":0},"gw38":{"points":0}},
+    {"name":"Ryan Christie","position":"MID","element":87,"gw36":{"points":-2,"ict":1.5,"minutes":41},"gw37":{"points":0,"ict":0.0,"minutes":0},"gw38":{"points":0}},
+    {"name":"Leo Shahar","position":"DEF","element":765,"gw36":{"points":0,"ict":0.0,"minutes":0},"gw37":{"points":0,"ict":0.0,"minutes":0},"gw38":{"points":0}},
+    {"name":"Zeki Amdouni","position":"FWD","element":216,"gw36":{"points":1,"ict":1.2,"minutes":11},"gw37":{"points":1,"ict":0.1,"minutes":20},"gw38":{"points":1}},
+    {"name":"Lucas Tolentino Coelho de Lima","position":"MID","element":612,"gw36":{"points":0,"ict":0.0,"minutes":0},"gw37":{"points":0,"ict":0.0,"minutes":0},"gw38":{"points":0}},
+    {"name":"Jorrel Hato","position":"DEF","element":672,"gw36":{"points":3,"ict":2.4,"minutes":90},"gw37":{"points":1,"ict":3.1,"minutes":90},"gw38":{"points":0}},
+    {"name":"Myles Peart-Harris","position":"MID","element":133,"gw36":{"points":0,"ict":0.0,"minutes":0},"gw37":{"points":0,"ict":0.0,"minutes":0},"gw38":{"points":0}},
+    {"name":"Bashir Humphreys","position":"DEF","element":193,"gw36":{"points":0,"ict":0.0,"minutes":0},"gw37":{"points":1,"ict":0.5,"minutes":8},"gw38":{"points":2}},
+    {"name":"Romain Faivre","position":"MID","element":92,"gw36":{"points":0,"ict":0.0,"minutes":0},"gw37":{"points":0,"ict":0.0,"minutes":0},"gw38":{"points":0}},
+    {"name":"Enock Agyei","position":"MID","element":203,"gw36":{"points":0,"ict":0.0,"minutes":0},"gw37":{"points":0,"ict":0.0,"minutes":0},"gw38":{"points":0}},
+    {"name":"Callum Bates","position":"MID","element":306,"gw36":{"points":0,"ict":0.0,"minutes":0},"gw37":{"points":0,"ict":0.0,"minutes":0},"gw38":{"points":0}}
+  ]
+}
