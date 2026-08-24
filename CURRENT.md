@@ -4,15 +4,15 @@ Last updated: 2026-08-24
 
 ## Active objective
 
-Implement the first domain-neutral ML/AI lifecycle contracts and immutable local registry.
+Build the deterministic evaluation engine and evidence-based findings layer.
 
 ## Active issue
 
-#2 — `[IN PROGRESS][P1] Implement core ML/AI contracts and local registry`
+#3 — `[IN PROGRESS][P1] Build evaluation engine and deterministic findings`
 
 ## Active branch
 
-`agent/issue-2-core-contracts-registry`
+`agent/issue-3-evaluation-engine`
 
 ## Active pull request
 
@@ -20,21 +20,25 @@ Not opened yet.
 
 ## Current status
 
-- bootstrap foundation promoted to `main` through PR #11 with explicit human approval
-- Issue #1 closed as complete
-- Issue #2 activated and assigned
-- domain-neutral contract layer added for datasets, candidates, experiments, metrics, findings, evaluation runs, and promotion decisions
-- deterministic canonical JSON and content identity helpers added
-- filesystem-backed immutable registry added with exclusive-create semantics and path-safety validation
-- initial contract and registry tests added
+- repository bootstrap is on `main`; ordinary implementation continues through `develop`
+- Issue #2 core contracts/local registry is complete and merged to `develop`
+- Issue #3 activated and assigned
+- deterministic regression metrics implemented: MAE and RMSE
+- deterministic binary classification metrics implemented: precision, recall, F1, and confusion-matrix cells
+- probability metrics implemented: Brier score, log loss, and calibration error with bin summary
+- reusable slice evaluation implemented
+- baseline/challenger comparison findings implemented
+- deterministic threshold, calibration, and protected-slice regression gates implemented
+- synthetic test demonstrates overall challenger improvement rejected by protected-slice regression
+- known-answer and invalid-input tests added
 
 ## Next action
 
-Open the Issue #2 pull request to `develop`, inspect CI, repair any deterministic failures, then continue against the issue acceptance criteria.
+Open the Issue #3 PR to `develop`, inspect repository CI, repair any failures, then verify all acceptance criteria before autonomous merge if policy permits.
 
 ## Human decisions required
 
-None for the current ordinary implementation route into `develop` unless a backward-incompatible public-contract decision or another explicit human gate emerges.
+None for this ordinary implementation route unless a backward-incompatible public-contract change or another explicit human gate emerges.
 
 ## Do not begin
 
