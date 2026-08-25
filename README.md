@@ -22,7 +22,7 @@ Consumer applications keep their own domain-specific ingestion, feature engineer
 
 ## Engineering platform
 
-This repository consumes the shared standards from `JCDevBot/engineering-platform` through the pinned release recorded in [`engineering-platform.yaml`](engineering-platform.yaml).
+This repository consumes the shared standards from `JonCunninghamDev/engineering-platform` through the pinned release recorded in [`engineering-platform.yaml`](engineering-platform.yaml).
 
 Current adopted release:
 
