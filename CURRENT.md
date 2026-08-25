@@ -4,53 +4,52 @@ Last updated: 2026-08-25
 
 ## Active objective
 
-Prove provider-neutral read-only external forecast normalization and comparison without introducing financial execution.
+Hold the completed local-first roadmap state on `develop` and await the next explicit human-gated product direction.
 
 ## Active issue
 
-#23 — `[IN PROGRESS][P3] Add read-only external forecast adapter contracts`
+None. All currently defined implementation issues are complete.
 
 ## Active branch
 
-`agent/issue-23-forecast-adapters`
+`develop`
 
 ## Active pull request
 
-Not opened yet.
+None after the final handoff-state update merges.
 
 ## Current status
 
-- Issues #2–#8 and #21 are complete and merged to `develop`; repository checks passed
-- Issue #7 added the approved outbound-only local connector prototype with explicit movement modes, allow-listed files, revocable identities, local fake transport, and no production credentials
-- Issue #21 added deterministic evidence-linked experiment recommendations and bounded search proposals while leaving promotion policy authoritative
-- Issue #23 branch defines provider-neutral forecast observations with source/target identity, probability, timestamp, read-only adapter protocol, and explicit resolution lineage
-- forecast evaluation reuses the existing deterministic probability evaluator and rejects post-resolution observations
-- tests compare a fake external consensus against an internal baseline with known-answer metrics and require no provider, network service, credential, trading, wallet, order, or payment surface
+- Issues #2–#8, #21, and #23 are complete and merged to `develop`; repository checks passed
+- core contracts, immutable local registry, deterministic evaluation/findings, local CLI, champion/challenger lifecycle, FPL consumer proof, provider-neutral LLM/RAG/agent evaluation, bounded local connector prototype, deterministic experiment recommendations, and read-only external forecast adapter proof are implemented
+- connector work remains local/outbound-only with explicit movement modes, allow-listed files, revocable identities, fake transport, and no production credentials
+- experiment recommendations reference exact evidence and remain subordinate to lifecycle/promotion policy
+- external forecast adapters normalize timestamped source/target probability evidence and explicitly exclude trading or financial execution
+- `main` still contains the earlier bootstrap release; the completed capability set is on `develop`
 
 ## Next action
 
-Open the Issue #23 PR to `develop`, run repository `Check`, repair any failure, and merge autonomously if all acceptance criteria remain satisfied and no human gate is crossed.
+Human decision required before further consequential work. The two meaningful next directions are:
+
+1. approve `develop` -> `main` promotion to publish the completed local-first platform capability set; and/or
+2. explicitly approve a bounded hosted control-plane design scope if work should proceed toward organizations/workspaces, authentication, subscriptions, schedules, dashboards, and shared audit history.
 
 ## Human decisions required
 
-None for Issue #23's read-only, local-fixture scope.
+At least one of the following:
 
-A human gate is still required before:
+- explicit approval to promote `develop` to `main`; or
+- a bounded approval for hosted control-plane/authentication/privacy/billing architecture before that trust boundary is designed or implemented.
 
-- `develop` to `main` promotion;
-- production credentials/authentication changes;
-- hosted deployment or billing;
-- real sensitive-data transfer;
-- production auto-promotion outside existing policy controls;
-- any trading, wallet, order, or financial execution capability.
+A separate human gate remains required before production credentials, hosted deployment, billing, real sensitive-data transfer, production auto-promotion outside existing policy controls, or any trading/financial execution capability.
 
 ## Do not begin
 
-- trading, wallets, orders, deposits, or financial execution
+- `develop` to `main` promotion without explicit human approval
+- hosted authentication/credential trust-boundary design without explicit approval
 - production deployment or hosted billing
 - real credentials or secrets
 - real sensitive-data transfer
 - unrestricted filesystem ingestion
-- provider-backed paid model calls in tests
-- FPL-specific implementation inside core modules
-- `develop` to `main` promotion without explicit human approval
+- production auto-promotion outside existing policy controls
+- trading, wallets, orders, deposits, or financial execution
