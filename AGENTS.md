@@ -18,7 +18,7 @@ Instruction precedence:
 
 At the beginning of every run:
 
-1. verify access to `JCDevBot/ml-ai-platform` with a real GitHub call;
+1. verify access to `JonCunninghamDev/ml-ai-platform` with a real GitHub call;
 2. confirm `main` is the default branch;
 3. read `README.md`;
 4. read `engineering-platform.yaml` and use only the pinned published platform release as shared steering;
